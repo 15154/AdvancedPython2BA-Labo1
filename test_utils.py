@@ -13,7 +13,7 @@ class TestUtils(unittest.TestCase):
 
     def test_roots(self):
         self.assertEqual(utils.roots(1, 0, 1), ())
-        self.assertEqual(utils.roots(0, 0, 0), (0))
+        self.assertEqual(utils.roots(1, 0, 0), (0,))
         self.assertEqual(utils.roots(2, 5, 2), (-0.5, -2))
         pass
     

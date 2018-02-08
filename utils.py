@@ -25,16 +25,16 @@ def roots(a, b, c):
     Post: Returns a tuple with zero, one or two elements corresponding
           to the roots of the ax^2 + bx + c polynomial.
     """
-    delta = (b*b - 4*a*c)
-    if delta <= 0 :
-        return print("No roots")
+    delta = ((b*b) - (4*a*c))
+    if delta < 0 :
+        return ()
     if delta == 0 :
-        root1 = (-b/(2*a))
-        return root1
-    if delta >= 0 :
-        root1 = (-b + sqrt(delta))/(2*a)
-        root2 = (-b - sqrt(delta)) / (2*a)
-        return root1, root2
+        root1 = ((-b)/(2*a))
+        return (root1,)
+    if delta >0 :
+        root1 = ((-b) + sqrt(delta))/(2*a)
+        root2 = ((-b) - sqrt(delta)) / (2*a)
+        return (root1, root2)
     pass
 
 def integrate(function, lower, upper):
